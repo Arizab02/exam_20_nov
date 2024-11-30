@@ -41,6 +41,16 @@ body{
     flex-direction: column;
     justify-content: normal;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+    float: left;
+    margin-right: 4px;
+    display: block;
+    color:greenyellow;
+}
+
 button{
     color: var(--text-color);
     background-color: var(--backgound-color);
@@ -62,15 +72,24 @@ button{
     margin:auto;
     gap:10px;
 }
-.wrapper .image img{
+.foto{
     border-radius: 20px;
     width: clamp(100px,200px,400px);
     height: fit-content;
     box-shadow: 2px 2px 5px 1px #262626;
     border:1px solid black;
     /* position: absolute; */
+    filter: blur(0); /* Tidak buram secara default */
+    transform: scale(1); /* Ukuran awal */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transisi halus */  
 }
-
+.foto:hover{
+    transform: scale(1.1); /* Membesar */
+    filter: blur(0); /* Tetap tajam */
+}
+.foto:not(:hover){
+    filter: blur(3px); /* Buramkan gambar lainnya */
+}
 /* container faq */
 .container-faq{
     display: flex;
