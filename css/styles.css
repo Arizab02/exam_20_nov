@@ -44,12 +44,12 @@ body{
 button{
     color: var(--text-color);
     background-color: var(--backgound-color);
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
     border-radius: 20px;
     border: unset;
     width:100px;
     margin:1opx;
-    /* float: left; 
+    float: left; 
 }
 
 .wrapper-wrapper{
